@@ -1,0 +1,29 @@
+
+
+    <h1 id="greeting" style="">Hello</h1>
+	<div class="div1"><a href="http://www.gucas.ac.cn/" target="_blank">http://www.gucas.ac.cn/</a></div>
+	<br/>
+	<div class="div1"><a href="/greeting/goodbye" target="_blank">goodbye page</a></div>
+	<br/>
+	<div class="div1"><a href="/students" target="_blank">students</a></div>
+	<div id="time"></div>
+
+	<script type="text/javascript">
+    function gettime(){
+      var showtime= document.getElementById("time");
+      setInterval(function(){
+      	var d = new Date();
+	  	var hour=d.getHours();
+		  if (hour<12){
+	 		document.getElementById("greeting").innerHTML="Good Morning";
+		  }else if(hour<18){
+		  	document.getElementById("greeting").innerHTML="Good Afternoon";
+		  }else if(hour<24){
+		  	document.getElementById("greeting").innerHTML="Good Evening";
+		  }
+		  showtime.innerHTML=d;
+      },100);
+    };
+	gettime(); 
+    </script> 
+
